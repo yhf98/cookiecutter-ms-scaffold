@@ -1,4 +1,4 @@
-from apps.portal.home.services.rpc.client import run
+from apps.services.rpc.client import run
 
 
 if __name__ == '__main__':

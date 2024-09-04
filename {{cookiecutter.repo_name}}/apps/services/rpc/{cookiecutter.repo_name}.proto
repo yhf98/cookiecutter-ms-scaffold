@@ -1,0 +1,25 @@
+syntax = "proto3";
+package {{cookiecutter.repo_name}};
+
+import "google/protobuf/struct.proto";
+
+service {{cookiecutter.repo_name|title}}Service {
+  // Generic
+
+  // Customize
+
+}
+
+// Generic
+message GetRequest {
+  string {{cookiecutter.business_key}} = 1;
+}
+
+message ListRequest {
+  google.protobuf.Struct data = 1;
+  int32 offset = 2;
+  int32 limit = 3;
+  repeated string ordering = 4;
+}
+
+// Customize

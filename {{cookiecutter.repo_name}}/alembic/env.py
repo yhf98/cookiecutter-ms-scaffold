@@ -28,7 +28,7 @@ sys.path.append(BASE_DIR)
 # from apps.admin.product.models import *
 # from apps.platform.apply.models import *
 # from apps.admin.usage.models import *
-from apps.portal.home.models import *
+from apps.models import *
 
 # 修改配置中的参数
 target_metadata = Base.metadata

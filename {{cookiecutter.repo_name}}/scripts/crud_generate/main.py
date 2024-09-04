@@ -17,7 +17,7 @@ class CrudGenerate(GenerateBase):
     APPS_ROOT = os.path.join(BASE_DIR, "apps")
     SCRIPT_DIR = os.path.join(BASE_DIR, 'scripts', 'crud_generate')
 
-    def __init__(self, model: Type[Base], zh_name: str, en_name: str = None):
+    def __init__(self, model: Type[Base], zh_name: str, en_name: str = None, version: str = 'v1'):
         """
         初始化工作
         :param model: 提前定义好的 ORM 模型
@@ -42,7 +42,7 @@ class CrudGenerate(GenerateBase):
         # crud 文件地址
         self.crud_file_path = self.app_dir_path / "crud.py"
         # view 文件地址
-        self.view_file_path = self.app_dir_path / "views.py"
+        self.view_file_path = self.app_dir_path / f"services/http/controller/{version}/{en_name}.py"
 
         if en_name:
             self.en_name = en_name
