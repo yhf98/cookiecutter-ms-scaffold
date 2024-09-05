@@ -1,0 +1,10 @@
+services:
+  consumer:
+    build:
+      context: .
+      dockerfile: docker/consumer/Dockerfile
+    volumes:
+      - .:/app
+    command: ["python", "main.py", "{{cookiecutter.repo_name}}"]
+    ports:
+      - "{{cookiecutter.repo_port}}:{{cookiecutter.repo_port}}"
