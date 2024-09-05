@@ -49,7 +49,7 @@ def create_app():
     for url in urls.urls:
         app.include_router(url["ApiRouter"], prefix=url["prefix"], tags=url["tags"])
     # 配置接口文档静态资源
-    custom_api_docs(app)
+    # custom_api_docs(app)
     return app
 
 @shell_app.command()
