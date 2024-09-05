@@ -55,8 +55,7 @@ def create_app():
 @shell_app.command()
 def app(
         host: str = typer.Option(default='0.0.0.0', help='监听主机IP，默认开放给本网络所有主机'),
-        port: int = typer.Option(default=int(9556), help='监听端口')
-        # port: int = typer.Option(default=int("{{cookiecutter.repo_port}}"), help='监听端口')
+        port: int = typer.Option(default=int("{{cookiecutter.repo_port}}"), help='监听端口')
 ):
     """
     {{cookiecutter.repo_name}}
