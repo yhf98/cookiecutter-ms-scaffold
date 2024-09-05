@@ -2,7 +2,7 @@
 BaseAuth 配置
 """
 AUTH_USER="admin"
-AUTH_PASSWORD="IKXYM0JB9V49iEmw"
+AUTH_PASSWORD="password"
 
 
 """
